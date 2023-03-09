@@ -1,0 +1,2 @@
+# sgpt
+shell gpt access
