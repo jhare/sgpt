@@ -7,7 +7,7 @@ manage keys at https://platform.openai.com/account/api-keys
 `sgpt "what is a minimal html5 document"`
 
 ```
-jhare@codysomenumber:~$ sgpt -p "what is a minimal html5 document"
+jhare@codysomenumber:~$ sgpt "what is a minimal html5 document"
 <!DOCTYPE html>
 <html>
  <head>
