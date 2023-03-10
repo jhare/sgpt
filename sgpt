@@ -81,6 +81,8 @@ curl https://api.openai.com/v1/completions \
 EOS`
 
 result=`eval ${curl}`
+
+
 exit_code=$?
 
 if [ $exit_code -ne 0 ]; then
@@ -88,5 +90,6 @@ if [ $exit_code -ne 0 ]; then
     exit $exit_code
 else
     echo -e $result | sed '$ s/.$//'
+    echo $result | sed '$ s/.$//' | xclip -selection clipboard
 fi
 exit 0

@@ -27,3 +27,8 @@ cd sgpt
 cp ./sgpt /usr/share/bin
 cp ./.sgpt ~/.config
 ```
+
+**dependencies**
+```
+sudo apt install jq xclip curl git
+```
