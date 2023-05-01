@@ -68,20 +68,17 @@ fi
 
 curl=`cat <<EOS
 curl https://api.openai.com/v1/completions \
-  -H 'Content-Type: application/json' \
+  -H "Content-Type: application/json" \
   -H "Authorization: Bearer $BEARER" \
   -d '{
-  "model": "$MODEL",
-  "prompt": "$PROMPT",
-  "max_tokens": $MAX_TOKEN,
-  "temperature": $TEMPERATURE
-
-}' \
---insecure 2>/tmp/sgpt | jq '.choices[]'.text | cut -c 6-
+    "model": "$MODEL",
+    "prompt": "$PROMPT",
+    "max_tokens": $MAX_TOKEN,
+    "temperature": $TEMPERATURE 
+  }' 2>/tmp/sgpt | jq '.choices[]'.text | cut -c 6-
 EOS`
 
 result=`eval ${curl}`
-
 
 exit_code=$?
 
